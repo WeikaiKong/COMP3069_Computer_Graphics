@@ -14,15 +14,22 @@ float vertices[] =
 	-0.f,  -0.5f, 0.f,		0.f, 0.f, 1.f
 };
 
+float move_x = 0.f;
+float move_y = 0.f;
 
+ 
 void processInput(GLFWwindow* window)
 {
 	glfwPollEvents();
 
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-	{
+	{	
 		glfwSetWindowShouldClose(window, true);
 	}
+	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)		move_y += 0.01;
+	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)	move_y -= 0.01;
+	if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)	move_x -= 0.01;
+	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)	move_x += 0.01;
 }
 
 unsigned int loadShaderSource()
@@ -70,10 +77,11 @@ int main(int argc, char** argv)
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
 		glUseProgram(shaderProgram);
-		float col_com = 0.5f;
+		//int ms = (int)(glfwGetTime() * 1000.f);
+		//float col_com = (float)(ms%1000)/1000.f;
 		// find the uniform varaiables in the shader program
-		int loc = glGetUniformLocation(shaderProgram, "grey_level");
-		glUniform1f(loc, col_com);
+		//int loc = glGetUniformLocation(shaderProgram, "grey_level");
+		//glUniform1f(loc, col_com);
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 		glBindVertexArray(0);

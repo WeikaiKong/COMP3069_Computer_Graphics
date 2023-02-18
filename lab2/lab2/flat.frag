@@ -1,9 +1,18 @@
 #version 330 core
-uniform float grey_level;
-in vec3 col;
 out vec4 fragColour;
+
+in vec3 col;
+in vec3 pos;
+
+uniform float grey_level;
 void main()
 {
-	fragColour = vec4(grey_level, grey_level, grey_level, 1.0f);
-	//fragColour = vec4(col, 1.0f);
-};
+	if(pos.y > 0)
+	{
+		fragColour = vec4(1.0f, 0.0f, 0.f, 1.0f);
+	}
+	else
+	{
+		fragColour = vec4(0.0f, 0.0f, 1.f, 1.0f);
+	}
+}

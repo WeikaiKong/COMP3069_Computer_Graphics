@@ -66,8 +66,8 @@ int main(int argc, char** argv)
 	int shaderProgram = LoadShader("triangle.vert", "flat.frag");
 
 	//CREATE CIRCLE HERE
-	int num_segs = 4;
-	float* vertices = CreateCircle(num_segs, 1.f);
+	int num_segs = 32;
+	float* vertices = CreateCircle(num_segs, .5f);
 
 	unsigned int VAO;
 	glGenVertexArrays(1, &VAO);

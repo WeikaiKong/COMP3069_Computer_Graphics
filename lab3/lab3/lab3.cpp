@@ -58,7 +58,7 @@ float* CreateCircle(int num_segments, float radius)
 int main(int argc, char** argv)
 {
 	//MAKE A WINDOW HERE
-	GLFWwindow* window = CeateWindow(800, 600, "modeling");
+	GLFWwindow* window = CreateWindow(800, 600, "modeling");
 
 	gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 

@@ -15,13 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lab3.cpp">
+    <ClCompile Include="lab4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\include\glad\glad.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="lab4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,24 +26,18 @@
     <ClInclude Include="shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="window.h">
+    <ClInclude Include="util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="util.h">
+    <ClInclude Include="window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="triangle.vert">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="flat.frag">
+    <None Include="simple.frag">
       <Filter>Source Files</Filter>
     </None>
     <None Include="simple.vert">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="simple.frag">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

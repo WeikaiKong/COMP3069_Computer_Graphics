@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a17c267b-27e8-40a1-9efd-10769d4322b7}</ProjectGuid>
-    <RootNamespace>lab3</RootNamespace>
+    <ProjectGuid>{e8168db5-ae6b-4899-b9ba-0836094f8624}</ProjectGuid>
+    <RootNamespace>bunny</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -132,20 +132,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\bunny\bunny_new\calNormals.cpp" />
+    <ClCompile Include="..\..\..\bunny\bunny_new\parser.cpp" />
     <ClCompile Include="..\..\include\glad\glad.c" />
-    <ClCompile Include="lab3.cpp" />
-    <ClCompile Include="lab4.cpp" />
+    <ClCompile Include="bunny.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="shader.h" />
-    <ClInclude Include="util.h" />
-    <ClInclude Include="window.h" />
+    <None Include="..\..\..\bunny\bunny_new\bunny" />
+    <None Include="..\..\..\bunny\bunny_new\bunny.fs" />
+    <None Include="..\..\..\bunny\bunny_new\bunny.vs" />
+    <None Include="..\..\..\bunny\bunny_new\bunny_iH.ply2" />
+    <None Include="..\..\..\bunny\bunny_new\bunny_normal.ply2" />
+    <None Include="..\..\..\bunny\bunny_new\lamp.fs" />
+    <None Include="..\..\..\bunny\bunny_new\lamp.vs" />
+    <None Include="..\..\..\bunny\bunny_new\Makefile" />
+    <None Include="..\..\..\bunny\bunny_new\memo.sh" />
+    <None Include="..\..\..\bunny\bunny_new\select.fs" />
+    <None Include="..\..\..\bunny\bunny_new\select.vs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="flat.frag" />
-    <None Include="simple.frag" />
-    <None Include="simple.vert" />
-    <None Include="triangle.vert" />
+    <Text Include="..\..\..\bunny\bunny_new\gain.txt" />
+    <Text Include="..\..\..\bunny\bunny_new\practical_requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\bunny\bunny_new\overview.png" />
+    <Image Include="..\..\..\bunny\bunny_new\selectPoint.png" />
+    <Image Include="..\..\..\bunny\bunny_new\terminal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\bunny\bunny_new\parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

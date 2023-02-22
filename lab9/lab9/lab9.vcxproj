@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e8168db5-ae6b-4899-b9ba-0836094f8624}</ProjectGuid>
-    <RootNamespace>bunny</RootNamespace>
+    <ProjectGuid>{41d902d1-2a5b-4ce7-8955-dcee38558dfb}</ProjectGuid>
+    <RootNamespace>lab9</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -132,7 +132,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bunny.cpp" />
+    <ClCompile Include="..\..\include\glad\glad.c" />
+    <ClCompile Include="lab9.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="phong.frag" />
+    <None Include="phong.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h" />
